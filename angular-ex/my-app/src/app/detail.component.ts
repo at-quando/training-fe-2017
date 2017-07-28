@@ -1,4 +1,4 @@
-import { Component,Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'detail',
@@ -29,5 +29,4 @@ import { Component,Input } from '@angular/core';
 })
 export class DetailsComponent {
 	@Input() detailInfo: any;
-  
 }
