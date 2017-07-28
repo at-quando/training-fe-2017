@@ -16,11 +16,11 @@ export class AppComponent {
   ]
 	constructor(){
 		this.trainers=[
-  	{avatar:this.imageAva[0],name:"Vy Nguyen T." ,birthday: "1989",team:"FE"},
-  	{avatar:this.imageAva[1],name:"Kien Nguyen T" ,birthday: "1993",team:"Ruby"},
+    {avatar:this.imageAva[0],name:"Vy Nguyen T." ,birthday: "1989",team:"FE"},
+    {avatar:this.imageAva[1],name:"Kien Nguyen T" ,birthday: "1993",team:"Ruby"},
     {avatar:this.imageAva[2],name:"Quan Do H." ,birthday: "1995",team:"FE"},
     {avatar:this.imageAva[3],name:"No Name" ,birthday: "",team:"Ruby"},
-  ];
+    ];
 	}
   showInfo(trainer){
     this.selectedTrainer = null;
