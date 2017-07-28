@@ -17,14 +17,14 @@ import { Component,Input } from '@angular/core';
     border-bottom: 1px solid grey;
   }
   @keyframes fadeIn {
-  0% {
-    opacity: 0;
+    0% {
+      opacity: 0;
+    }
+    100% {
+      visibility: visible;
+      opacity: 1;
+    }
   }
-  100% {
-    visibility: visible;
-    opacity: 1;
-  }
-}
   `]
 })
 export class DetailsComponent {
