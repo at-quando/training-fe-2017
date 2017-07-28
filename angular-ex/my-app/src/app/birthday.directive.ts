@@ -6,7 +6,7 @@ import { Directive, Input, TemplateRef, ViewContainerRef,ElementRef, Renderer } 
 
 export class BirthdayDirective {
   @Input() emptyData: any;
-	constructor(
+  constructor(
     private el: ElementRef,
     private renderer: Renderer
   ) { }
