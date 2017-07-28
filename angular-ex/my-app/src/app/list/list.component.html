@@ -1,0 +1,7 @@
+<h1> List member </h1>
+  <ul id="list-member">
+    <li *ngFor="let member of dataset">
+      {{ member.name }}
+      <button (click) ="deleteMember(member.id)">Delete {{member.id}}</button>
+    </li>
+	</ul>
