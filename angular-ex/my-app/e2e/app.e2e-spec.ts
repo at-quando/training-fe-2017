@@ -1,10 +1,10 @@
-import { MyAppPage } from './app.po';
+import { DirectivesExPage } from './app.po';
 
-describe('my-app App', () => {
-  let page: MyAppPage;
+describe('directives-ex App', () => {
+  let page: DirectivesExPage;
 
   beforeEach(() => {
-    page = new MyAppPage();
+    page = new DirectivesExPage();
   });
 
   it('should display welcome message', () => {
