@@ -6,14 +6,14 @@
   <th>Team</th>
   <tbody *ngFor="let trainer of trainers" >
 	  <tr class="ruby" *ngIf= "trainer.team == 'Ruby' ">
-	  	<td><img src={{trainer.avatar}} class="image-box"></td>
+	    <td><img src={{trainer.avatar}} class="image-box"></td>
 	    <td>{{trainer.name}}</td>
 	    <td [emptyData]="trainer.birthday" ></td>
 	    <td>{{trainer.team}}</td>
 	    <td><button (click) = "showInfo(trainer)">Show details</button></td>
 	  </tr>
 	  <tr class="fe" *ngIf= "trainer.team == 'FE' ">
-	  	<td><img src={{trainer.avatar}} class="image-box"></td>
+	    <td><img src={{trainer.avatar}} class="image-box"></td>
 	    <td>{{trainer.name}}</td>
 	    <td [emptyData]="trainer.birthday" ></td>
 	    <td>{{trainer.team}}</td>
