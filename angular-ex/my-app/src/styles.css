@@ -1,1 +1,86 @@
 /* You can add global styles to this file, and also import other style files */
+
+/*in table*/
+.image-logo{
+	width: 50px;
+	height: 50px;
+	background-size: cover;
+}
+
+.image-avatar{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	border: 0.5px solid grey;
+}
+
+.text-empty{
+	font-style: italic;
+}
+
+.fe{
+      background-color: grey;
+}
+
+.ruby{
+      background-color: white;
+}
+
+.table-box{
+	float: left;
+	padding-right: 50px;
+	border-collapse: collapse;
+	width: 35%;
+}
+/*in details*/
+.info-box{
+  animation: 1s fadeIn;
+  animation-fill-mode: forwards;
+  width: 65%;
+  float: right;
+}
+
+.info-box-custom{
+	padding-left: 50px;
+}
+
+.image-name{
+	float: left;
+	width: 20%;
+}
+
+.information-name{
+	float: right;
+	width: 80%;
+}
+
+.image-box-info{
+	border-radius: 50%;
+	border: 0.5px solid grey;
+	width: 90%;
+	height: 90%;
+}
+
+.info-name{
+  font-size: 20px;
+}
+
+.logo-box{
+	width: 30px;
+	height: 30px;
+}
+ 
+.info-border{
+  border-bottom: 1px solid grey;
+  margin-bottom: 20px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}

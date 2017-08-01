@@ -1,13 +1,18 @@
 <div *ngIf="detailInfo" class="info-box">
-	<div class="info-border">
-		<h1>Information</h1>
-	</div>
-	<p> 
-		<label class="info-name"><b>Name:</b></label>
-		<span class="info-name"><b>{{detailInfo.name}}</b></span><br>
-		<label class="info-name"><b>Birthday:</b></label>
-	  <span [emptyData]="detailInfo.birthday"></span><br>
-	  <label class="info-name"><b>Team:</b></label>
-	  <span>{{detailInfo.team}}</span>
-	</p>
+  <div class="info-box-custom">
+    <div class="info-border">
+      <h1>Information</h1>
+    </div>
+    <aside class="image-name">
+      <img src="{{ detailInfo.avatar|imageDefault }}" class="image-box-info">
+    </aside>
+    <div class="information-name"> 
+      <label class="info-name"><b>Name:</b></label>
+      <span class="info-name"><b>{{detailInfo.name}}</b></span><br>
+      <label class="info-name"><b>Birthday:</b></label>
+      <span [emptyData]="detailInfo.birthday"></span><br>
+      <label class="info-name"><b>Team:</b></label>
+      <img src="{{detailInfo.teamLogo|imageDefault: 'logo'}}" class="logo-box"><span>{{detailInfo.team}}</span>
+    </div>
+  </div>
 </div>
