@@ -1,33 +1,69 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, FormBuilder, Validators, AbstractControl} from '@angular/forms';
+import { User } from './user.interface';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  trainers: any[];
-  teamColor: boolean;
-  selectedTrainer: any;
-  imageAva=["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBgz1wen061qd4crGM907p8z8eWTRZqUbZ_blRivbcWCX8l1tV",
-  "https://t4.ftcdn.net/jpg/01/13/92/79/500_F_113927934_sCoaIlA5zeK7yEskjh1tG7GAqseplkAT.jpg",
-  "https://qph.ec.quoracdn.net/main-qimg-23ce3068c64a607a204ff1354c0aee2b-c",
-  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQQJ9vykMdF_tzkv6CrqdIj00sw66RCvtcxHNSNBbsUounNz60"
-  ]
+export class AppComponent implements OnInit {
+  formRegister: any;
+  teams: Array<string>;
+  trainers: any;
+  trainer: User;
+  check: boolean;
 
-  constructor(){
-    this.trainers=[
-      {avatar:this.imageAva[0],name:"Vy Nguyen T." ,birthday: "1989",team:"FE"},
-      {avatar:this.imageAva[1],name:"Kien Nguyen T" ,birthday: "1993",team:"Ruby"},
-      {avatar:this.imageAva[2],name:"Quan Do H." ,birthday: "1995",team:"FE"},
-      {avatar:this.imageAva[3],name:"No Name" ,birthday: "",team:"Ruby"},
+  constructor(private fb: FormBuilder) { 
+    this.teams =[
+    'FE', 'Ruby', 'PHP'
     ];
+    this.trainers=[];
+    this.check = false;
   }
 
-  showInfo(trainer){
-    this.selectedTrainer = null;
-    setTimeout(()=>{
-      this.selectedTrainer = trainer;
-    });
+  ngOnInit() {
+    this.formRegister = this.fb.group({
+      personal: this.fb.group({
+        name: ['', [Validators.required]],
+        birthday: [''],
+        avatar: ['']
+      }),
+      company: this.fb.group({
+        team: ['',[Validators.required]],
+        joined: []
+      }),
+      skills: []
+    })
+
+    this.formRegister.get('company.team').valueChanges.subscribe(
+      (val: string) => {
+        this.formRegister.setControl('skills', new FormControl('', [this.checkSkills]));
+      }
+    );
+  }
+
+  checkSkills = (input: FormControl) => {
+    let isValid: boolean;
+    let prerequisite : string;
+    prerequisite = this.formRegister.get('company.team').value.toLowerCase();
+    if(input.value.toLowerCase().match(prerequisite)) {
+      isValid = true;
+    }
+    else if ( prerequisite.toLowerCase() == 'fe' && input.value.search('css') !== -1) {
+      isValid = true;
+    }
+    else {
+      isValid = false;
+    }
+    return isValid ?  null: { skillsInvalid: true };
+  }
+
+  onSubmit(model: User) {
+    this.trainers.push(model);
+  }
+
+  fillDetails(object) {
+    (<FormGroup>this.formRegister).setValue(object, { onlySelf: true });
   }
 }
