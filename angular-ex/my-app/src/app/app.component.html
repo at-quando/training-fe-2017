@@ -1,20 +1,55 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!
-  </h1>
-  <img width="300" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAyNTAgMjUwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNTAgMjUwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDojREQwMDMxO30NCgkuc3Qxe2ZpbGw6I0MzMDAyRjt9DQoJLnN0MntmaWxsOiNGRkZGRkY7fQ0KPC9zdHlsZT4NCjxnPg0KCTxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iMTI1LDMwIDEyNSwzMCAxMjUsMzAgMzEuOSw2My4yIDQ2LjEsMTg2LjMgMTI1LDIzMCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAJIi8+DQoJPHBvbHlnb24gY2xhc3M9InN0MSIgcG9pbnRzPSIxMjUsMzAgMTI1LDUyLjIgMTI1LDUyLjEgMTI1LDE1My40IDEyNSwxNTMuNCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAxMjUsMzAgCSIvPg0KCTxwYXRoIGNsYXNzPSJzdDIiIGQ9Ik0xMjUsNTIuMUw2Ni44LDE4Mi42aDBoMjEuN2gwbDExLjctMjkuMmg0OS40bDExLjcsMjkuMmgwaDIxLjdoMEwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMQ0KCQlMMTI1LDUyLjF6IE0xNDIsMTM1LjRIMTA4bDE3LTQwLjlMMTQyLDEzNS40eiIvPg0KPC9nPg0KPC9zdmc+DQo=">
+<div class="container">
+  <h1>Add User</h1>
+  <form [formGroup]="formRegister" (ngSubmit)="onSubmit(formRegister.value)">
+    <fieldset class="form-group" formGroupName="personal">
+      <div>
+        <label for="">Name</label>
+        <input type="text" class="form-control" formControlName="name">
+        <small class="text-danger"> Name is required (minimum 5 characters).</small>
+      </div>
+      <div>
+        <label for=""> Birthday</label>
+        <input type="date" class="form-control" formControlName="birthday">
+        <label for=""> Avatar</label>
+        <input type="text" class="form-control" formControlName="avatar">
+      </div>
+    </fieldset>
+    <fieldset class="form-group" formGroupName="company">
+      <div>
+        <label for="">Team</label>
+        <select id="team" class="form-control" formControlName="team" >
+        <option>Ruby</option>
+        <option>PhP</option>
+        <option>FE</option>
+        </select>
+      </div>
+    </fieldset>
+    <div>
+      <label for="">Skill</label>
+      <input type="text" class="form-control" formControlName="skills">
+    </div><br>
+    <button [disabled]="!formRegister.valid" type="submit" class="btn btn-primary">SUBMIT</button>
+  </form>
+  <h1>Member</h1>
+  <table class="table table-striped">
+    <thead class="head-table">
+      <th class="head-title">Avatar</th>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Birthday</th>
+      <th>Team</th>
+      <th>Skill</th>
+      <th>Action</th>
+    </thead>
+    <tbody class="content-custom" *ngFor="let trainer of trainers">
+      <tr >
+        <td class="content-custom"></td>
+        <td class="content-custom">{{trainer.personal.name}}</td>
+        <td class="content-custom"> {{trainer.personal.birthday}}</td>
+        <td class="content-custom">{{trainer.company.team}}</td>
+        <td class="content-custom">{{trainer.skills}}</td>
+        <td class="content-custom"><button class="btn btn-primary" (click)="fillDetails(trainer)" >Show details</button></td>
+      </tr>
+    </tbody>
+  </table>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" href="http://angularjs.blogspot.ca/">Angular blog</a></h2>
-  </li>
-</ul>
-
