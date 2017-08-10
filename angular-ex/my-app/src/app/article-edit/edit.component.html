@@ -1,0 +1,29 @@
+<div class="edit-background" id="edit-bg">
+  <div class="edit-panel">
+    <h2 class="edit-title">EDIT ARTICLE </h2>
+    <h4 class="edit-title">with id {{article.id}}</h4>
+    <form [formGroup]="formEdit" class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 form-panel">
+      <div class="edit-field">
+        <label for="">Title</label>
+        <input type="text" class="form-control" formControlName="title">
+      </div>
+      <div class="edit-field">
+        <label for="">Content</label>
+        <input type="text" class="form-control" formControlName="content">
+      </div>
+      <div class="edit-field">
+        <label for="">Image</label>
+        <input type="text" class="form-control" formControlName="image">
+      </div>
+      <div class="edit-field">
+        <label for="">Description</label>
+        <textarea rows="4" class="form-control descrip" formControlName="description"></textarea>
+      </div>
+      <div class="edit-field">
+        <label for="">Author</label>
+        <input type="text" class="form-control" formControlName="author">
+      </div>
+    <button class="btn btn-save" (click)="navigateto()">SAVE</button>
+    </form>
+  </div>
+</div>
