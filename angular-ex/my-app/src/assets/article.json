@@ -1,0 +1,44 @@
+{
+	"articles": [
+		{
+		"id": 0,
+		"title": "Man must explore, and this is exploration at its greatest",
+		"image": "http://www.parmidatours.com/sites/default/files/styles/753x414/public/wallpaper_fromparis_louvre_pyramid_full_0.jpg?itok=thofn8ox",
+		"content": "Problems look mighty small from 150 miles up",
+		"description": "Neverin all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.Science cuts two ways, of course; its products can be used for both good and evil. But there's no turning back from science. The early warnings about technological dangers also come from science.What was most significant about the lunar voyage was not that man set foot on the Moon but that they set eye on the earth.A Chinese tale tells of some men sent to harm a young girl who, upon seeing her beauty, become her protectors rather than her violators. That's how I felt seeing the Earth for the first time. I could not help but love and cherish her.For those who have seen the Earth from space, and for the hundreds and perhaps thousands more who will, the experience most certainly changes your perspective. The things that we share in our world are far more valuable than those which divide us.",
+		"author": "No name"
+		},
+		{
+		"id": 1,
+		"title": "I believe every human has a finite number of heartbeats. ",
+		"image": "https://s-media-cache-ak0.pinimg.com/originals/e1/6c/a0/e16ca00216f09aa2add853d7eeda0cc4.jpg",
+		"content": "I don't intend to waste any of mine.",
+		"description": "There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.",
+		"author": "name 1"
+		},
+		{
+		"id": 2,
+		"title": "Science has not yet mastered prophecy",
+		"image": "http://www.frommers.com/system/media_items/attachments/000/855/267/s500/kristen_allen.jpg?1438208610",
+		"content": "We predict too much for the next year and yet far too little for the next ten.",
+		"description": "As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.",
+		"author": "name 2"
+		},
+		{
+		"id": 3,
+		"title": "Failure is not an option",
+		"image": "http://cdn-image.travelandleisure.com/sites/default/files/styles/1600x1000/public/1441050759/INSTAGRAM0815-AntoineCollas.jpg?itok=U60fm_ZC",
+		"content": "asfdbadjshkdf",
+		"description": "Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.",
+		"author": "name 3"
+		},
+		{
+		"id": 4,
+		"title": "Many say exploration is part of our destiny",
+		"image": "http://www.hdtimelapse.net/content/HDtimelapse.net_POV/HDtimelapse.net_POV_0099_hirez.jpg",
+		"content": "Many say exploration is part of our destiny, but it’s actually our duty to future generations.",
+		"description": "As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature, Man must explore, and this is exploration at its greatest.",
+		"author": "name 4"
+		}
+	]
+}

@@ -1,0 +1,28 @@
+<header class="intro-header">
+  <div class="site-heading heading-list">
+    <h1>Journey Articles</h1>
+    <hr class="small">
+    <span class="subheading">A webpage about journey!</span>
+  </div>
+</header>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <div *ngFor="let article of articles">
+        <div class="article-item">
+          <div class="article-item-info">
+            <a [routerLink]="['../detail', article.id]" class="detail-link" id="link">
+              <h3 class="post-title" for="link">{{article.title}}</h3>
+              <h4>{{article.content}}</h4>
+              <h4 class="author-box">Author by <span class="author-custom">{{article.author}}</span></h4>
+            </a>
+            <a [routerLink]="['../edit', article.id]" class="btn-edit">EDIT →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+        
+          

@@ -1,0 +1,22 @@
+<div class="detail-header">
+  <img src={{article.image}} class="image-post">
+  <div class="site-heading">
+    <h1>{{article.title}}</h1>
+    <hr class="small">
+    <span class="subheading">{{article.content}}</span>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 custom-description">
+      {{article.description}}
+      <div class="btn-edit">
+        <span>-- {{article.author}} --</span><br>
+        <a [routerLink]="['/edit',article.id]">WANT TO EDIT THIS POST?</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
