@@ -1,0 +1,22 @@
+<h2>
+  {{itemFound()}}
+</h2>
+<ul *ngFor="let product of shoppingCartItem">
+  <li class="item-in-cart">
+    <img src={{product.image}} class="image-product">
+    <div class="info-product">
+      <h2 class="name-product">{{product.name}}</h2>
+      <h3 class="price-product" style="float: right;">${{product.price}}</h3>
+      <p class="content-product"> {{product.content}} </p>
+      <div>
+        <p>Quantity:</p>
+        <button class="btn" (click)="minusQuantity(product)">-</button>
+        <input class="input-cart" type="text" value={{product.quantity}}> 
+        <button class="btn" (click)="plusQuantity(product)">+</button>
+      </div>
+      <button (click)='deleteItems(product)' class="btn btn-danger btn-del-cart"> Delete </button>
+    </div>
+  </li>
+  <hr class="small">
+</ul>
+<span class="total-price">Total: {{getTotal() | async}}</span>

@@ -1,0 +1,25 @@
+{
+	"products": [
+		{	
+			"id": 0,
+			"name": "Drink",
+			"image": "http://static3.uk.businessinsider.com/image/586d08565d0bc41f008b4ee3/the-50-best-food-bloggers-to-follow-on-instagram-in-2017.jpg",
+			"content": "adsfasdfasf",
+			"price": 1000
+		},
+		{	
+			"id": 1,
+			"name": "Food",
+			"image":"http://lsa5.0.assets.s3.amazonaws.com/wp-content/uploads/2014/07/foodandtravelhk.jpg",
+			"content":"adsfasdfasf",
+			"price": 2000
+		},
+		{	
+			"id": 2,
+			"name": "Fast Food",
+			"image": "https://media2.fdncms.com/styleweekly/imager/photogenic-food-at-the-boathouse-rocketts/u/original/1894868/place_to_instagram_your_food.jpg",
+			"content": "adsfasdfasf",
+			"price": 3000
+		}
+	]
+}
