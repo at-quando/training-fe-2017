@@ -33,10 +33,9 @@
 .btn-item:active {
 	animation:animatezoom 1s;
 }
-	@keyframes 
-	animatezoom {
-		from{transform:scale(2)} to {transform:scale(1)
-	}
+@keyframes 
+animatezoom {
+	from{transform:scale(2)} to {transform:scale(1)}
 }
 
 .info-item {
