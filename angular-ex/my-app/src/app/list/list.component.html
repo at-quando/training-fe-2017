@@ -1,0 +1,21 @@
+<h2>
+  List of Products
+</h2>
+<ul *ngFor="let product of products">
+  <li class="list-item">
+    <div class="hover-item">
+      <a [routerLink]="['detail',product.id]">
+        <img src ={{product.image}} class="image-item">
+        <div class="info-item">
+          <span class="title-item">{{product.name}}</span>
+          <p class="price-item"><b>${{product.price}}</b></p>
+          <p class="content-item">{{product.content}}</p>
+        </div>
+      </a>
+      <button (click)="addToCart(product)" class="btn-item animate-zoom">
+        <img src="http://onecommedia.com/templates/include/shopping-cart.png" class="cart-item">
+      </button>
+    </div>
+  </li>
+</ul>
+
