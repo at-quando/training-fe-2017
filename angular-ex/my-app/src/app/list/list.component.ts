@@ -26,6 +26,6 @@ export class ListComponent {
   
   addToCart(obj) {
     this._productService.addToCart(obj);
-  	this.router.navigate(['/']);
+    this.router.navigate(['/']);
   }
 }
