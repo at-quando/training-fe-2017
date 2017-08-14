@@ -9,7 +9,7 @@ export class ProductService {
   private productsSubject: BehaviorSubject<Product[]> = new BehaviorSubject([]);
   private products: Product[]=[];
 
-  constructor(private http: Http ){
+  constructor(private http: Http ) {
     this.productsSubject.subscribe(items => this.products = items );
   }
 
